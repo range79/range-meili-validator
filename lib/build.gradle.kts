@@ -25,7 +25,7 @@ dependencies {
     implementation(libs.guava)
     // Source: https://mvnrepository.com/artifact/org.springframework/spring-beans
     implementation("org.springframework:spring-beans:7.0.3")
-    testImplementation("org.junit.jupiter:junit-jupiter:5.12.1")
+    testImplementation("org.junit.jupiter:junit-jupiter:6.0.2")
 }
 
 tasks.test {
