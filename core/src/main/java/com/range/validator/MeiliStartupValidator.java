@@ -1,6 +1,7 @@
 package com.range.validator;
 
-import com.range.validator.exception.DatabaseUrlIsNullOREmptyException;
+import com.range.validator.exception.MeiliNotStartedException;
+import com.range.validator.exception.MeiliUrlIsNullOREmptyException;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
@@ -46,7 +47,7 @@ public class MeiliStartupValidator {
 
     public void setDataSourceURL(String dataSourceURL) {
         if (dataSourceURL == null || dataSourceURL.isBlank()) {
-            throw new DatabaseUrlIsNullOREmptyException(
+            throw new MeiliUrlIsNullOREmptyException(
                     "You can't validate Meili without URL. " +
                             "Validating Meili without URL is like making coffee without coffee."
             );
@@ -59,7 +60,7 @@ public class MeiliStartupValidator {
      */
     public void validateDatabase() {
         if (dataSourceURL == null) {
-            throw new DatabaseUrlIsNullOREmptyException("Meili datasource URL is not set");
+            throw new MeiliUrlIsNullOREmptyException("Meili datasource URL is not set");
         }
 
         long deadline = System.currentTimeMillis() + timeout * 1000L;
@@ -71,7 +72,7 @@ public class MeiliStartupValidator {
             sleep(interval * 1000L);
         }
 
-        throw new IllegalStateException(
+        throw new MeiliNotStartedException(
                 "Meili search is not ready after " + timeout + " seconds"
         );
     }
