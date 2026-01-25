@@ -11,7 +11,7 @@ public class MeiliStartupAutoConfiguration {
 
     @Bean
     public MeiliStartupValidator meiliStartupValidator(
-            @Value("${meili.startup.url:localhost:7070}") String url,
+            @Value("${meili.startup.url:http://localhost:7070}") String url,
             @Value("${meili.startup.timeout:30}") int timeout,
             @Value("${meili.startup.interval:1}") int interval
     ) {

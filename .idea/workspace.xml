@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a25d0b7c-eddf-4c8b-b2e5-a11fc257ad0e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="a25d0b7c-eddf-4c8b-b2e5-a11fc257ad0e" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -76,6 +74,11 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/spring/src/main/resources/META-INF/spring" />
+    </key>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="a25d0b7c-eddf-4c8b-b2e5-a11fc257ad0e" name="Changes" comment="" />
@@ -90,6 +93,7 @@
       <workItem from="1769367578862" duration="1882000" />
       <workItem from="1769371056808" duration="635000" />
       <workItem from="1769371757097" duration="61000" />
+      <workItem from="1769371875624" duration="144000" />
     </task>
     <servers />
   </component>
