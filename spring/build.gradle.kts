@@ -11,6 +11,7 @@ repositories {
 
 dependencies {
     implementation(project(":core"))
+
     implementation("org.springframework:spring-context:7.0.3")
     implementation("org.springframework.boot:spring-boot-autoconfigure:4.0.0")
     compileOnly("org.springframework.boot:spring-boot-configuration-processor:4.0.0")
@@ -26,4 +27,6 @@ java {
     toolchain {
         languageVersion.set(JavaLanguageVersion.of(17))
     }
+    withSourcesJar()
+    withJavadocJar()
 }

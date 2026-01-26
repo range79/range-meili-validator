@@ -27,8 +27,14 @@ public class MeiliStartupValidator {
      * Meili search base URL (example: http://localhost:7700)
      */
     private String dataSourceURL;
+    /*
+     * timeout in seconds
+     */
 
     private int timeout = DEFAULT_TIMEOUT;
+    /*
+     * time interval in seconds
+     */
     private int interval = DEFAULT_INTERVAL;
 
     private final OkHttpClient httpClient = new OkHttpClient();

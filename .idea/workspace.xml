@@ -5,12 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a25d0b7c-eddf-4c8b-b2e5-a11fc257ad0e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/spring/src/main/java/com/range/properties/MeiliStartupProperties.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/core/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/range/validator/MeiliStartupValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/range/validator/MeiliStartupValidator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spring/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/spring/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring/src/main/java/com/range/MeiliStartupInitializingBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring/src/main/java/com/range/MeiliStartupInitializingBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring/src/main/java/com/range/autoconfig/MeiliStartupAutoConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring/src/main/java/com/range/autoconfig/MeiliStartupAutoConfiguration.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,8 +64,9 @@
     &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;properties&quot;,
     &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
@@ -103,7 +102,11 @@
       <workItem from="1769371875624" duration="144000" />
       <workItem from="1769372103280" duration="311000" />
       <workItem from="1769372644688" duration="798000" />
-      <workItem from="1769424240853" duration="2166000" />
+      <workItem from="1769424240853" duration="2720000" />
+      <workItem from="1769443705394" duration="168000" />
+      <workItem from="1769443933912" duration="15000" />
+      <workItem from="1769455927130" duration="4000" />
+      <workItem from="1769456005829" duration="767000" />
     </task>
     <servers />
   </component>
