@@ -1,8 +1,12 @@
 package com.range.autoconfig;
 
 import com.range.MeiliStartupInitializingBean;
+import com.range.meili.http.MeiliHttpClient;
+import com.range.meili.validator.MeiliHealthChecker;
+import com.range.meili.validator.MeiliIndexChecker;
+import com.range.meili.validator.MeiliStartupValidator;
+import com.range.meili.validator.MeiliTaskChecker;
 import com.range.properties.MeiliStartupProperties;
-import com.range.validator.MeiliStartupValidator;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -12,14 +16,26 @@ import org.springframework.context.annotation.Configuration;
 public class MeiliStartupAutoConfiguration {
 
     @Bean
+    public MeiliHttpClient meiliHttpClient(MeiliStartupProperties properties) {
+        return new MeiliHttpClient(properties.getApiKey());
+    }
+
+    @Bean
     public MeiliStartupValidator meiliStartupValidator(
+            MeiliHttpClient httpClient,
             MeiliStartupProperties properties
     ) {
-        MeiliStartupValidator validator = new MeiliStartupValidator();
-        validator.setDataSourceURL(properties.getUrl());
-        validator.setTimeout(properties.getTimeout());
-        validator.setInterval(properties.getInterval());
-        return validator;
+        MeiliHealthChecker healthChecker = new MeiliHealthChecker(httpClient, properties.getUrl());
+        MeiliTaskChecker taskChecker = new MeiliTaskChecker(httpClient, properties.getUrl());
+        MeiliIndexChecker indexChecker = new MeiliIndexChecker(httpClient, properties.getUrl());
+
+        return new MeiliStartupValidator(
+                healthChecker,
+                taskChecker,
+                indexChecker,
+                properties.getTimeout(),
+                properties.getInterval()
+        );
     }
 
     @Bean

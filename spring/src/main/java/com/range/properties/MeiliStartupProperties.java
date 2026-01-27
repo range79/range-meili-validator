@@ -13,6 +13,18 @@ public class MeiliStartupProperties {
      */
     private int timeout = 30;
 
+    public String getApiKey() {
+        return apiKey;
+    }
+
+    public void setApiKey(String apiKey) {
+        this.apiKey = apiKey;
+    }
+
+    /** Meili api key for connecting Meili if you start your app with --master-key
+ * add here apikey
+ */
+    private String apiKey;
     /**
      * Poll interval (seconds)
      */

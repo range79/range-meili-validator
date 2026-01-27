@@ -1,6 +1,6 @@
 package com.range;
 
-import com.range.validator.MeiliStartupValidator;
+import com.range.meili.validator.MeiliStartupValidator;
 import org.springframework.beans.factory.InitializingBean;
 
 public class MeiliStartupInitializingBean implements InitializingBean {
@@ -13,6 +13,6 @@ public class MeiliStartupInitializingBean implements InitializingBean {
 
     @Override
     public void afterPropertiesSet() {
-        validator.validateDatabase();
+        validator.validate();
     }
 }

@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a25d0b7c-eddf-4c8b-b2e5-a11fc257ad0e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/core/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/range/validator/MeiliStartupValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/range/validator/MeiliStartupValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/spring/build.gradle.kts" afterDir="false" />
-    </list>
+    <list default="true" id="a25d0b7c-eddf-4c8b-b2e5-a11fc257ad0e" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -106,7 +101,7 @@
       <workItem from="1769443705394" duration="168000" />
       <workItem from="1769443933912" duration="15000" />
       <workItem from="1769455927130" duration="4000" />
-      <workItem from="1769456005829" duration="767000" />
+      <workItem from="1769456005829" duration="2871000" />
     </task>
     <servers />
   </component>

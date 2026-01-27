@@ -1,4 +1,4 @@
-package com.range.validator.exception;
+package com.range.meili.exception;
 
 public class MeiliNotStartedException extends RuntimeException {
     public MeiliNotStartedException(String message){
