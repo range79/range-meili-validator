@@ -9,15 +9,28 @@ import java.io.IOException;
 public class MeiliHttpClient {
 
     private final OkHttpClient client = new OkHttpClient();
+    private final String apiKey;
+
+    public MeiliHttpClient() {
+        this.apiKey = null;
+    }
+
+    public MeiliHttpClient(String apiKey) {
+        this.apiKey = apiKey;
+    }
 
     public String get(String url) throws IOException {
-        Request request = new Request.Builder()
-                .url(url)
-                .get()
-                .build();
+                Request.Builder builder = new Request.Builder().url(url).get();
+
+
+        if (apiKey != null && !apiKey.isBlank()) {
+            builder.header("X-Meili-API-Key", apiKey);
+        }
+
+        Request request = builder.build();
 
         try (Response response = client.newCall(request).execute()) {
-            if (!response.isSuccessful() || response.body() == null) {
+            if (!response.isSuccessful()) {
                 throw new IOException("HTTP request failed: " + response.code());
             }
             return response.body().string();
