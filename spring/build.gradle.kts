@@ -19,6 +19,7 @@ dependencies {
     testImplementation("org.junit.jupiter:junit-jupiter:6.0.2")
     // Source: https://mvnrepository.com/artifact/org.testcontainers/testcontainers
     testImplementation("org.testcontainers:testcontainers:2.0.3")
+    testImplementation("org.springframework.boot:spring-boot-starter-test:4.0.0")
 }
 
 tasks.test {
