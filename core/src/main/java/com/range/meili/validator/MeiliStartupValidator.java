@@ -1,6 +1,9 @@
 package com.range.meili.validator;
 
 import com.range.meili.exception.MeiliNotStartedException;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 
 /**
  * Database validator for Meilisearch.
@@ -8,7 +11,7 @@ import com.range.meili.exception.MeiliNotStartedException;
  * including snapshot import completion.
  */
 public class MeiliStartupValidator {
-
+    private final Logger log = LoggerFactory.getLogger(MeiliStartupValidator.class.getName());
     private final MeiliHealthChecker healthChecker;
     private final MeiliTaskChecker taskChecker;
     private final MeiliIndexChecker indexChecker;
@@ -37,6 +40,7 @@ public class MeiliStartupValidator {
 
             if (!healthChecker.isHealthy()) {
                 sleep();
+                log.warn("Meili search not healty");
                 continue;
             }
 

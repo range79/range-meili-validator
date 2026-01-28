@@ -1,5 +1,4 @@
 package com.range.meili.enums;
-
 public enum MeiliTaskStatus {
 
     ENQUEUED,
@@ -15,7 +14,7 @@ public enum MeiliTaskStatus {
         }
 
         try {
-            return MeiliTaskStatus.valueOf(value.toUpperCase());
+            return valueOf(value.toUpperCase());
         } catch (IllegalArgumentException ex) {
             return UNKNOWN;
         }

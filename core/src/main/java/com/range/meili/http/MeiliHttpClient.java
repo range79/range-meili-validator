@@ -24,7 +24,7 @@ public class MeiliHttpClient {
 
 
         if (apiKey != null && !apiKey.isBlank()) {
-            builder.header("X-Meili-API-Key", apiKey);
+            builder.header("Authorization", "Bearer " + apiKey);
         }
 
         Request request = builder.build();
