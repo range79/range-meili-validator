@@ -21,14 +21,16 @@ dependencies {
     testImplementation("org.junit.platform:junit-platform-engine:6.0.2")
     testImplementation("org.junit.platform:junit-platform-launcher:6.0.2")
 
-    // Testcontainers
+
+    // Source: https://mvnrepository.com/artifact/org.testcontainers/testcontainers
     testImplementation("org.testcontainers:testcontainers:2.0.3")
     testImplementation("org.testcontainers:junit-jupiter:1.21.4")
     // Source: https://mvnrepository.com/artifact/org.assertj/assertj-core
-    testImplementation("org.assertj:assertj-core:4.0.0-M1")
+    testImplementation("org.assertj:assertj-core:3.27.7")
 
     // Spring Boot test starter
-    testImplementation("org.springframework.boot:spring-boot-starter-test:4.0.0")
+    // Source: https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-test
+    testImplementation("org.springframework.boot:spring-boot-starter-test:4.0.2")
 }
 
 tasks.test {
