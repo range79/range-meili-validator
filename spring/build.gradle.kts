@@ -24,6 +24,8 @@ dependencies {
     // Testcontainers
     testImplementation("org.testcontainers:testcontainers:2.0.3")
     testImplementation("org.testcontainers:junit-jupiter:1.21.4")
+    // Source: https://mvnrepository.com/artifact/org.assertj/assertj-core
+    testImplementation("org.assertj:assertj-core:4.0.0-M1")
 
     // Spring Boot test starter
     testImplementation("org.springframework.boot:spring-boot-starter-test:4.0.0")

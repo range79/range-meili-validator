@@ -12,7 +12,7 @@ repositories {
 }
 
 dependencies {
-    compileOnly("com.squareup.okhttp3:okhttp:5.3.2")
+    implementation("com.squareup.okhttp3:okhttp:5.3.2")
     compileOnly("org.slf4j:slf4j-api:2.0.17")
     testImplementation("org.junit.jupiter:junit-jupiter:6.0.2")
     // Source: https://mvnrepository.com/artifact/org.slf4j/slf4j-api
