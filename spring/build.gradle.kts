@@ -16,11 +16,10 @@ dependencies {
     compileOnly("org.springframework.boot:spring-boot-configuration-processor:4.0.0")
     annotationProcessor("org.springframework.boot:spring-boot-configuration-processor:4.0.0")
 
-    // JUnit 6 resmi sürüm
+
     testImplementation("org.junit.jupiter:junit-jupiter:6.0.2")
     testImplementation("org.junit.platform:junit-platform-engine:6.0.2")
     testImplementation("org.junit.platform:junit-platform-launcher:6.0.2")
-
 
     // Source: https://mvnrepository.com/artifact/org.testcontainers/testcontainers
     testImplementation("org.testcontainers:testcontainers:2.0.3")
