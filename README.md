@@ -112,7 +112,7 @@ meili.startup.timeout=    # second format default is 30
 meili.startup.api-key=YOUR_MEILI_API_KEY
 ```
 
-# what is interwal ?
+# what is interval ?
 interval is the frequency at which requests are sent during the timeout period.
 In other words, it defines how often the system should check Meili until the timeout is reached.
 
