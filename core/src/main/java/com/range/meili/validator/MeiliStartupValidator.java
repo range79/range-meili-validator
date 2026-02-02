@@ -33,23 +33,25 @@ public class MeiliStartupValidator {
         this.intervalSeconds = intervalSeconds;
     }
 
-    public void validate() {
+    public void validate(boolean loggingEnabled) {
         long deadline = System.currentTimeMillis() + timeoutSeconds * 1000L;
 
         while (System.currentTimeMillis() < deadline) {
 
             if (!healthChecker.isHealthy()) {
+                logIfEnabled(loggingEnabled, "Health check failed");
                 sleep();
-                log.warn("Meili search not healty");
                 continue;
             }
 
             if (!taskChecker.isSnapshotFinished()) {
+                logIfEnabled(loggingEnabled, "Snapshot import still running");
                 sleep();
                 continue;
             }
 
             if (!indexChecker.isQueryable()) {
+                logIfEnabled(loggingEnabled, "Indexes are not queryable yet");
                 sleep();
                 continue;
             }
@@ -58,9 +60,11 @@ public class MeiliStartupValidator {
         }
 
         throw new MeiliNotStartedException(
-                "Meili search is not ready after " + timeoutSeconds + " seconds"
+                "MeiliSearch is not ready after " + timeoutSeconds + " seconds"
         );
     }
+
+
 
     private void sleep() {
         try {
@@ -68,6 +72,11 @@ public class MeiliStartupValidator {
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
             throw new RuntimeException(e);
+        }
+    }
+    private void logIfEnabled(boolean enabled, String message) {
+        if (enabled) {
+            log.error("Meili startup failed: {}", message);
         }
     }
 }

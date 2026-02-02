@@ -14,7 +14,7 @@ public class MeiliHealthChecker {
     }
 
     public boolean isHealthy() {
-        return httpClient.isOk(baseUrl + "/health");
+         return httpClient.isOk(baseUrl + "/health");
     }
 }
 
