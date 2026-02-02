@@ -29,7 +29,7 @@ class MeiliIntegrationWithoutSnapshotTest {
     static final GenericContainer<?> meili =
             new GenericContainer<>("getmeili/meilisearch:v1.6")
                     .withExposedPorts(7700)
-                    .withCommand("meilisearch") // snapshot yok
+                    .withCommand("meilisearch")
                     .waitingFor(
                             new MultiEndpointWaitStrategy(
                                     List.of("/health", "/indexes", "/stats")

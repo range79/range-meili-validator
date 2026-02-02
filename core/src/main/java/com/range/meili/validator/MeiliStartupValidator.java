@@ -36,7 +36,7 @@ public class MeiliStartupValidator {
         this.loggingEnabled =loggingEnabled;
     }
 
-    public void validate(boolean loggingEnabled) {
+    public void validate() {
         long deadline = System.currentTimeMillis() + timeoutSeconds * 1000L;
 
         while (System.currentTimeMillis() < deadline) {
