@@ -1,19 +1,15 @@
 package com.range.meili.validator;
 
 
-
 import com.range.meili.enums.MeiliTaskStatus;
 import com.range.meili.exception.MeiliNotStartedException;
 import com.range.meili.http.MeiliHttpClient;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 
 public class MeiliTaskChecker {
 
     private final MeiliHttpClient httpClient;
     private final String baseUrl;
-    private final Logger log =LoggerFactory.getLogger(MeiliTaskChecker.class);
 
     public MeiliTaskChecker(MeiliHttpClient httpClient, String baseUrl) {
         this.httpClient = httpClient;
@@ -39,7 +35,6 @@ public class MeiliTaskChecker {
             };
 
         } catch (Exception e) {
-            log.error("Task check failed: " + e.getMessage());
             return false;
         }
     }

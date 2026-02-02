@@ -30,6 +30,16 @@ public class MeiliStartupProperties {
      */
     private int interval = 1;
 
+    public boolean getLogMode() {
+        return logMode;
+    }
+
+    public void setLogMode(boolean logMode) {
+        this.logMode = logMode;
+    }
+
+    private boolean logMode= true;
+
     public String getUrl() {
         return url;
     }
