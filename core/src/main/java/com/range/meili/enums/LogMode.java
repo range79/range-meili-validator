@@ -1,6 +1,7 @@
 package com.range.meili.enums;
 
 public enum LogMode {
+    NONE,
     INFO,
     WARN,
     ERROR,

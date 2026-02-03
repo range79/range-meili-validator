@@ -74,7 +74,7 @@ public class MeiliStartupValidator {
         }
     }
     private void log(LogMode level, String message) {
-        if (logMode == null) return;
+        if (logMode == null || logMode == LogMode.NONE) return;
 
         switch (level) {
             case DEBUG -> {
