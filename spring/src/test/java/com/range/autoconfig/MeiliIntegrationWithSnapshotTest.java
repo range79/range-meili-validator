@@ -28,7 +28,7 @@ class MeiliIntegrationWithSnapshotTest {
 
     @Container
     static final GenericContainer<?> meili =
-            new GenericContainer<>("getmeili/meilisearch:v1.6")
+            new GenericContainer<>("getmeili/meilisearch:latest")
                     .withExposedPorts(7700)
 
 

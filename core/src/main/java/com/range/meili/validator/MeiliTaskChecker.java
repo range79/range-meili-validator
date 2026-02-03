@@ -20,17 +20,24 @@ public class MeiliTaskChecker {
         try {
             String body = httpClient.get(baseUrl + "/tasks?types=snapshotCreation");
 
-
-            if (!body.contains("snapshotImport")) {
+            if (!body.contains("\"results\":") || body.contains("\"results\":[]")) {
                 return true;
             }
+            int statusIndex = body.indexOf("\"status\":\"");
+            if (statusIndex == -1) return false;
 
-            MeiliTaskStatus status = MeiliTaskStatus.from(body);
+            int start = statusIndex + "\"status\":\"".length();
+            int end = body.indexOf("\"", start);
+            if (end == -1) return false;
+
+            String statusString = body.substring(start, end);
+
+            MeiliTaskStatus status = MeiliTaskStatus.from(statusString);
 
             return switch (status) {
                 case SUCCEEDED -> true;
                 case ENQUEUED, PROCESSING -> false;
-                case FAILED, CANCELED,UNKNOWN ->
+                case FAILED, CANCELED, UNKNOWN ->
                         throw new MeiliNotStartedException("Snapshot import " + status);
             };
 
