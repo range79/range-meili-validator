@@ -31,8 +31,20 @@ public class MeiliHttpClient {
         try (Response response = client.newCall(request).execute()) {
             if (!response.isSuccessful()) {
                 if (response.code() == 401 || response.code() == 403) {
-                    log.error("Authentication failed! Status: {}. Response: {}", response.code(), response.body());
+                    String responseBody = response.body().string();
+                    String keyStatus = (apiKey == null || apiKey.isBlank()) ? "missing or empty" : "invalid";
+
+                    log.error(
+                            "MeiliSearch authentication failed! Master API key is {}. " +
+                                    "HTTP Status: {}. Response body: {}. " +
+                                    "Application will terminate immediately.",
+                            keyStatus,
+                            response.code(),
+                            responseBody
+                    );
+
                     System.exit(1);
+
                 }
                 throw new IOException("HTTP request failed: " + response.code());
             }
