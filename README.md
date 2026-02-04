@@ -148,3 +148,23 @@ In other words, it defines how often the system should check Meili until the tim
 
 
 
+Tabii! İşte Markdown formatında, README’ye direkt ekleyebileceğin şekilde **uyarı/disclaimer** bölümü:
+
+
+## ⚠Disclaimer: Master API Key Required
+
+**Important:** If your Meilisearch instance requires a master API key:
+
+- **Invalid API key**, or  
+- **No API key provided** while the instance enforces authentication  
+
+will cause the application to **terminate immediately**.
+
+The validator will log a clear error message and then call:
+
+```java
+System.exit(1);
+```
+
+This ensures the application does **not continue running without proper authentication**, preventing any unsafe attempts to query Meilisearch.
+

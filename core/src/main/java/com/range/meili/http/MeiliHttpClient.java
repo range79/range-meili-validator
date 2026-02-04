@@ -59,7 +59,6 @@ public class MeiliHttpClient {
         } catch (InvalidMaterKeyException e) {
             throw e;
         } catch (IOException e) {
-            log.warn("Meilisearch not reachable for URL: {}. {}", url, e.getMessage());
             return false;
         }
     }
