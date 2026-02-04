@@ -77,25 +77,18 @@ public class MeiliStartupValidator {
     private void log(LogMode level, String message) {
         if (logMode == null || logMode == LogMode.NONE) return;
 
-        switch (logMode) {
+        switch (level) {
             case DEBUG -> {
-                log.debug(message);
-                log.info(message);
-                log.warn(message);
-                log.error(message);
+                if (logMode == LogMode.DEBUG) log.debug(message);
             }
             case INFO -> {
-                if (level == LogMode.INFO) log.info(message);
-                if (level == LogMode.WARN) log.warn(message);
-                if (level == LogMode.ERROR) log.error(message);
+                if (logMode == LogMode.DEBUG || logMode == LogMode.INFO) log.info(message);
             }
             case WARN -> {
-                if (level == LogMode.WARN) log.warn(message);
-                if (level == LogMode.ERROR) log.error(message);
+                if (logMode == LogMode.DEBUG || logMode == LogMode.INFO || logMode == LogMode.WARN)
+                    log.warn(message);
             }
-            case ERROR -> {
-                if (level == LogMode.ERROR) log.error(message);
-            }
+            case ERROR -> log.error(message);
         }
     }
 
