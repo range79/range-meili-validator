@@ -3,11 +3,13 @@ package com.range.meili.http;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 
 public class MeiliHttpClient {
-
+private final static Logger log =LoggerFactory.getLogger(MeiliHttpClient.class);
     private final OkHttpClient client = new OkHttpClient();
     private final String apiKey;
 
@@ -27,6 +29,9 @@ public class MeiliHttpClient {
 
         try (Response response = client.newCall(request).execute()) {
             if (!response.isSuccessful()) {
+                if (response.code() == 401 ||response.code() == 403) {
+                    log.error("Authentication failed! Status: {}. Response: {}",response.code(), response.body());
+                }
                 throw new IOException("HTTP request failed: " + response.code());
             }
             return response.body().string();
