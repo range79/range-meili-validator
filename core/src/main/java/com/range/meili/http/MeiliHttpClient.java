@@ -32,7 +32,7 @@ public class MeiliHttpClient {
             if (!response.isSuccessful()) {
                 if (response.code() == 401 || response.code() == 403) {
                     log.error("Authentication failed! Status: {}. Response: {}", response.code(), response.body());
-                    throw new InvalidMaterKeyException("Master key is invalid. Status: " + response.code());
+                    System.exit(1);
                 }
                 throw new IOException("HTTP request failed: " + response.code());
             }
