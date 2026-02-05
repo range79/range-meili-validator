@@ -127,10 +127,6 @@ interval is the frequency at which requests are sent during the timeout period.
 In other words, it defines how often the system should check Meili until the timeout is reached.
 
 
-
-Tabii! İşte Markdown formatında, README’ye direkt ekleyebileceğin şekilde **uyarı/disclaimer** bölümü:
-
-
 ## ⚠Disclaimer: Master API Key Required
 
 **Important:** If your Meilisearch instance requires a master API key:
