@@ -1,4 +1,6 @@
-# Chris Meilisearch Startup Validator
+# range Meilisearch Startup Validator 
+Idea credit: Chris
+
 
 ## Latest version
 [![](https://jitpack.io/v/range79/Chris-meili-validator.svg)](https://jitpack.io/#range79/Chris-meili-validator)
