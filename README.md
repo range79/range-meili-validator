@@ -121,28 +121,10 @@ meili.startup.timeout=
 # Only set this if your Meilisearch instance was started with an API key.
 meili.startup.api-key=YOUR_MEILI_API_KEY
 
-# default log mode is "info"
-meili.startup.log-mode=
 
 
 
 ```
-### What is `log-mode`?
-
-The `log-mode` property controls how much information is logged during the Meilisearch startup validation process.
-
-It determines the level of detail printed while the system checks whether Meilisearch is ready.
-
-Available log modes:
-
-- `NONE`  – Disables all startup logs.
-- `INFO`  – Logs basic startup status and readiness information (default).
-- `WARN`  – Logs only warning messages and unusual situations.
-- `ERROR` – Logs only critical errors and failures.
-- `DEBUG` – Logs detailed startup process information for troubleshooting.
-
-Using `DEBUG` mode is recommended only during development or debugging, as it may generate excessive log output.
-
 
 # what is interval ?
 interval is the frequency at which requests are sent during the timeout period.
