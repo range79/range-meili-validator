@@ -53,7 +53,7 @@ Add JitPack repository:
 <dependency>
   <groupId>com.github.range79</groupId>
   <artifactId>range-meili-validator-core</artifactId>
-  <version>VERSION</version>
+  <version>1.6.1</version>
 </dependency>
 ```
 
@@ -63,7 +63,7 @@ Add JitPack repository:
 <dependency>
   <groupId>com.github.range79</groupId>
   <artifactId>range-meili-validator-spring</artifactId>
-  <version>VERSION</version>
+  <version>1.6.1</version>
 </dependency>
 ```
 
@@ -83,13 +83,13 @@ repositories {
 #### Core only
 
 ```gradle
-implementation("com.github.range79:range-meili-validator-core:VERSION")
+implementation("com.github.range79:range-meili-validator-core:1.6.1")
 ```
 
 #### Spring Boot integration
 
 ```gradle
-implementation("com.github.range79:range-meili-validator-spring:VERSION")
+implementation("com.github.range79:range-meili-validator-spring:1.6.1")
 ```
 
 When you use the Spring module, `core` is included automatically.
