@@ -11,7 +11,7 @@ repositories {
 dependencies {
     implementation(project(":core"))
 
-    compileOnly("org.springframework:spring-context:7.0.3")
+    compileOnly("org.springframework:spring-context:7.0.4")
     compileOnly("org.springframework.boot:spring-boot-autoconfigure:4.0.2")
     compileOnly("org.springframework.boot:spring-boot-configuration-processor:4.0.2")
     annotationProcessor("org.springframework.boot:spring-boot-configuration-processor:4.0.2")
