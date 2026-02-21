@@ -18,8 +18,8 @@ dependencies {
 
 
     testImplementation("org.junit.jupiter:junit-jupiter:6.0.2")
-    testImplementation("org.junit.platform:junit-platform-engine:6.0.2")
-    testImplementation("org.junit.platform:junit-platform-launcher:6.0.2")
+    testImplementation("org.junit.platform:junit-platform-engine:6.0.3")
+    testImplementation("org.junit.platform:junit-platform-launcher:6.0.3")
 
     // Source: https://mvnrepository.com/artifact/org.testcontainers/testcontainers
     testImplementation("org.testcontainers:testcontainers:2.0.3")

@@ -19,8 +19,8 @@ dependencies {
     testImplementation("com.squareup.okhttp3:mockwebserver:5.3.2")
 
 
-    testImplementation("org.junit.platform:junit-platform-engine:6.0.2")
-    testImplementation("org.junit.platform:junit-platform-launcher:6.0.2")
+    testImplementation("org.junit.platform:junit-platform-engine:6.0.3")
+    testImplementation("org.junit.platform:junit-platform-launcher:6.0.3")
 }
 
 tasks.test {
