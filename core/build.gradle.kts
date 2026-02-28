@@ -14,7 +14,7 @@ repositories {
 dependencies {
     implementation("com.squareup.okhttp3:okhttp:5.3.2")
     compileOnly("org.slf4j:slf4j-api:2.0.17")
-    testImplementation("org.junit.jupiter:junit-jupiter:6.0.2")
+    testImplementation("org.junit.jupiter:junit-jupiter:6.0.3")
     // Source: https://mvnrepository.com/artifact/com.squareup.okhttp3/mockwebserver
     testImplementation("com.squareup.okhttp3:mockwebserver:5.3.2")
 
