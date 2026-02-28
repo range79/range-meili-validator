@@ -17,7 +17,7 @@ dependencies {
     annotationProcessor("org.springframework.boot:spring-boot-configuration-processor:4.0.3")
 
 
-    testImplementation("org.junit.jupiter:junit-jupiter:6.0.2")
+    testImplementation("org.junit.jupiter:junit-jupiter:6.0.3")
     testImplementation("org.junit.platform:junit-platform-engine:6.0.3")
     testImplementation("org.junit.platform:junit-platform-launcher:6.0.3")
 
