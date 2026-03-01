@@ -1,2 +1,2 @@
-rootProject.name = "chris-meilisearch-startup-validator"
+rootProject.name = "range-meilisearch-startup-validator"
 include("core", "spring")
