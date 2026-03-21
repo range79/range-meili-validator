@@ -22,7 +22,7 @@ dependencies {
     testImplementation("org.junit.platform:junit-platform-launcher:6.0.3")
 
     // Source: https://mvnrepository.com/artifact/org.testcontainers/testcontainers
-    testImplementation("org.testcontainers:testcontainers:2.0.3")
+    testImplementation("org.testcontainers:testcontainers:2.0.4")
     testImplementation("org.testcontainers:junit-jupiter:1.21.4")
     // Source: https://mvnrepository.com/artifact/org.assertj/assertj-core
     testImplementation("org.assertj:assertj-core:3.27.7")
